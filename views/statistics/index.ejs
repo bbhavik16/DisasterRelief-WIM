@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+
+
+<h3 class="mt-4 mb-4" style="text-align: center;">Number of people impacted by our portal</h2>
+
+<canvas id="myChart4" style="width:100%;max-width:700px; display: inline-block; margin-left: 30px; margin-bottom: 30px;">Bar Chart</canvas>
+
+<canvas id="myChart3" style="width:100%;max-width:700px; display: inline-block; margin-bottom: 30px;"></canvas>
+<script>
+
+var x4Values = ["Earthquake", "Flood", "Tsunami", "Cyclone", "Drought"];
+var y4Values = [380, 490, 240, 310, 450];
+var barColors = ["#431677", "#30134f","#b66fff","#5715a2","#431677"];
+
+new Chart("myChart4", {
+  type: "bar",
+  data: {
+    labels: x4Values,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y4Values
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "No of people getting help"
+    }
+  }
+});
+
+var x3Values = ["Earthquake", "Flood", "Tsunami", "Cyclone", "Drought"];
+var y3Values = [380, 490, 240, 310, 450];
+var barColors = ["#431677", "#30134f","#b66fff","#5715a2","#431677"];
+
+new Chart("myChart3", {
+  type: "pie",
+  data: {
+    labels: x3Values,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y3Values
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "No of people getting help"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
