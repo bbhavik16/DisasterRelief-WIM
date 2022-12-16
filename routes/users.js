@@ -24,7 +24,7 @@ router.post('/register', catchAsync(async(req, res) => {
 }))
 
 router.get('/login', (req, res) => {
-    redirectHere = req.session.returnTo || "/";
+    redirectHere = req.session.returnTo || "/https://disasterrelief-wim-production.up.railway.app/";
     res.render('users/login');
 })
 
