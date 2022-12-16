@@ -24,6 +24,7 @@ router.post('/register', catchAsync(async(req, res) => {
 }))
 
 router.get('/login', (req, res) => {
+    redirectHere = req.session.returnTo || "/";
     res.render('users/login');
 })
 
