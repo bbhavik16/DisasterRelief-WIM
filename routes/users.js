@@ -30,7 +30,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', passport.authenticate(['local', 'passport-google-oauth20'], {failureFlash: true, failureRedirect: '/volunteer/login'}), (req, res) => {
     req.flash('success', 'Welcome back');
-    const redirectUrl = req.session.returnTo || '/volunteer';
+    const redirectUrl = '/volunteer';
     delete req.session.returnTo;
     res.redirect(redirectUrl)
 })
